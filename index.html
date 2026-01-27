@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fouress Inc</title>
+
+<style>
+html{scroll-behavior:smooth}
+
+:root{
+  --primary:#1f4fd8;
+  --accent:#f26a21;
+  --success:#25D366;
+  --dark:#0f172a;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{line-height:1.6;color:#333;background:#fff}
+
+header{
+  background:linear-gradient(135deg,#1f4fd8,#6a3dc9);
+  color:#fff;
+  padding:40px 20px;
+  text-align:center;
+}
+
+nav{
+  background:var(--primary);
+  padding:10px;
+  text-align:center;
+}
+nav a{
+  color:#fff;
+  margin:0 12px;
+  text-decoration:none;
+  font-weight:bold;
+}
+nav a:hover{color:var(--accent)}
+
+section{
+  padding:40px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+section h2{
+  margin-bottom:15px;
+  color:var(--primary);
+  text-align:center;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  border:1px solid #e5e7eb;
+  padding:20px;
+  border-radius:10px;
+  background:#fff;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+.card h3{color:var(--primary);margin-bottom:10px}
+
+#contact{
+  background:#f8fafc;
+  border-radius:12px;
+}
+
+form{max-width:500px;margin:20px auto}
+input,textarea,button{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+}
+button{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  border-radius:6px;
+  font-weight:bold;
+  transition:.2s ease;
+}
+button:hover{
+  background:#d8561b;
+  transform:translateY(-1px);
+}
+
+footer{
+  background:var(--dark);
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+}
+
+/* Floating buttons */
+.whatsapp,.call{
+  position:fixed;
+  right:20px;
+  color:#fff;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 4px 8px rgba(0,0,0,.3);
+  transition:transform .2s ease;
+}
+.whatsapp{
+  bottom:20px;
+  background:var(--success);
+  font-size:26px;
+  padding:14px 16px;
+}
+.call{
+  bottom:90px;
+  background:var(--primary);
+  font-size:22px;
+  padding:14px 16px;
+}
+.whatsapp:hover,.call:hover{transform:scale(1.08)}
+
+@media(max-width:600px){
+  header h1{font-size:1.6rem}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div style="display:flex;align-items:center;justify-content:center;gap:15px;flex-wrap:wrap;">
+    <img src="logo.png" alt="Fouress Inc Logo" style="height:70px;">
+    <div style="text-align:left">
+      <h1 style="margin:0;">Fouress Inc</h1>
+      <p style="margin:0;font-size:14px;">
+        Sales & Service of Desktop Computers, Printers, CCTV & Laptops
+      </p>
+      <p style="margin:4px 0 0;font-size:12px;opacity:.85;">
+        Trusted IT Solutions • Bengaluru
+      </p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Fouress Inc specializes in sales and professional service of Desktop Computers,
+    Laptops, Printers, and CCTV systems. We focus on reliable products, expert support,
+    and long-term customer satisfaction.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Desktop & Laptop Sales</h3>
+      <p>Sales and configuration of branded and custom-built desktop computers and laptops.</p>
+    </div>
+    <div class="card">
+      <h3>Printer Sales & Service</h3>
+      <p>Installation, repair, and maintenance of inkjet and laser printers.</p>
+    </div>
+    <div class="card">
+      <h3>CCTV Sales & Installation</h3>
+      <p>Complete CCTV solutions including supply, installation, and after-sales support.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <p style="text-align:center;font-weight:bold">
+    🏢 Fouress Inc
+  </p>
+  <p style="text-align:center">
+    #15/3/2A, Shop No.7, 1st Floor<br>
+    80 Feet Road, Jnana Bharathi Post<br>
+    Nagadevanahalli, Bengaluru – 560056
+  </p>
+
+  <!-- Google Map (Exact Pin) -->
+  <div style="margin-top:20px">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5413852993356!2d77.49021767572272!3d12.937171115630878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d4e838a67df%3A0x132e73c13e01df77!2sFouress%20Inc!5e0!3m2!1sen!2sin!4v1769084953850!5m2!1sen!2sin"
+      width="100%" height="300" style="border:0;"
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Get Directions -->
+  <div style="text-align:center;margin:20px 0;">
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Fouress+Inc+Nagadevanahalli+Bengaluru"
+       target="_blank"
+       style="display:inline-block;background:var(--primary);color:#fff;
+              padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:bold;">
+      🚗 Get Directions
+    </a>
+  </div>
+
+  <!-- Star Rating -->
+  <div style="text-align:center;margin:15px 0;">
+    <a href="https://search.google.com/local/writereview?placeid=ChIJ32eK0049rjsRdx8BPsFzLhM"
+       target="_blank" style="text-decoration:none;color:#000;">
+      <div style="font-size:22px;color:#fbbc05;">★★★★★</div>
+      <div style="font-size:14px;">Rated 5.0 on Google Reviews</div>
+    </a>
+  </div>
+
+  <!-- Review Button -->
+  <div style="text-align:center;margin:15px 0;">
+    <a href="https://search.google.com/local/writereview?placeid=ChIJ32eK0049rjsRdx8BPsFzLhM"
+       target="_blank"
+       style="display:inline-block;background:#fbbc05;color:#000;
+              padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:bold;">
+      ⭐ Leave a Google Review
+    </a>
+  </div>
+
+  <p style="text-align:center">
+    📞 <a href="tel:9880507125">9880507125</a> /
+    <a href="tel:9448051697">9448051697</a><br>
+    📧 fouressinc@rediffmail.com<br>
+    🌐 <a href="https://fouressinc.business.site" target="_blank">
+      fouressinc.business.site
+    </a>
+  </p>
+
+  <form onsubmit="sendMessage(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Fouress Inc. All rights reserved.</p>
+  <p>📞 9880507125 / 9448051697</p>
+</footer>
+
+<a href="https://wa.me/9880507125" class="whatsapp" target="_blank">💬</a>
+<a href="tel:9880507125" class="call">📞</a>
+
+<script>
+function sendMessage(e){
+  e.preventDefault();
+  alert("Thank you! We will contact you shortly.");
+}
+</script>
+
+</body>
+</html>
